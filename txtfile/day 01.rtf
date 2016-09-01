@@ -1,0 +1,160 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17120\viewh18080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ifconfig commande d\'92affichage \
+\
+echo \
+\
+cat -e pour afficher tout les characteres\
+\
+more file.txt   // permet de se d\'e9placer et rechercher dans le fichier !!\
+\
+less file.txt // encore mieux que more\
+\
+\
+//filtrer les affichages\
+\
+head // premieres lignes\
+\
+tail // derni\'e8res lignes\
+\
+tail -n 3 file.txt  // permet d\'92avoir les 3 derniers lignes dun fichier\
+\
+grep \'93matthieu\'94 file.txt // permet d\'92avoir tout les matthieu \
+\
+grep -v \'93Matthieu\'94 file.txt // enlev\'e9 tout les Matthieu\
+\
+grep -i \'93Matthieu\'94 file.txt // ne prend pas en co,pte les majuscues // minuscules\
+\
+man grep \
+\
+\
+\
+CHAINER ses commandes\
+\
+REDIRECTION\
+//\
+echo \'93bonjour\'94 > output \
+// enregistre dans un output\
+echo \'93bonjour 2\'94 >> output \
+// va append le contenu\
+\
+cat < file.txt // on a feinte son entre standard pour que ce soit le fichier\
+\
+cat file.txt | grep \'93Mathieu\'94\
+// comme si le cat \'e9crivais directement dans l entre standard de grep\
+cat file.txt | grep \'93Mathieu\'94 | head -n 1\
+// grep les matthieu avec que la premiere ligne\
+\
+\
+la commande SORT se base sur la table ASCII et du coup les majuscules sont avant les minuscules\
+\
+man sort \
+\
+file.txt sort | cut -d , -f 1 // que les premiers champs jusque la virgule\
+si on ajoute le cat -e on peux voir les espaces en trop ..\
+\
+// faire des modifications\
+\
+file.txt  | cut -d , -f 1 | sed \'93s/thomas/Thomas/\'94 // premier characters s veux dire substitution \
+\
+file.txt  | cut -d , -f 1 | tr \'93\'e9\'94 \'93e\'94 // prend un charactere et change lautre \
+\
+// \
+\
+wc // calcule le nombre de lignes puis mots puis charactere \
+\
+cat file.txt | grep Thomas | wc -l \
+// je r\'e9cup\'e8re le fichier, je cherche les thomas et je prend tout les lignes je vois qu\'92il y a 7 thomas\
+\
+file file.txt\
+// me donne des informations sur le fichier\'85 \
+\
+if config \
+// information sur votre r\'e9seau\
+\
+bc \
+// calculatrice\
+\
+echo \'931 + 2\'94 | bc \
+= 3 \
+Pratique si on veux calculer un nombre de ligne ou autre \
+\
+// find . \
+\
+trouve tt les fichier qui sont dans les dossier. \
+\
+find /user -name \'93ls*\'94\
+\
+filtre sur le poid etc..\
+\
+// ENVIRONEMENT \
+\
+env \
+\
+// creer une variable\
+\
+export LINE=3 \
+\
+\
+BONUS \
+\
+Sortie standard \
+\
+sortie d\'92erreur.. \
+\
+cat azazzaaz\
+\
+message sur la sortie d\'92erreur. \
+\
+cat file.txt | rev\
+\
+inverser la sortie d\'92erreur et le traiter comme si c\'92\'e9tait la sortie terreur\
+\
+cat azzzeaze 2>&1 | rev\
+\
+cat azeaze 2 > error // redirection vers error\
+\
+cat azeaze affiche le message d\'92erreur\
+\
+// mettre tout les fichier qui sont pas marcher dans un fichier d\'92erreur \
+\
+cat file.txt file.txt azeaz 2> error\
+\
+cat error\
+\
+// fichier qui sert a \'91supprimer certaines choses\'92\
+\
+echo \'93bonjour \'94 > /dev/null\
+\
+sert a effacer tout les message qui ne nous int\'e9resse pas.. pour debugger c  cool !\
+exemple: \
+\
+cat file.txt file.txt file.txt file.txt azeaz file.txt >  /dev/null va me sortir que les messages d\'92erreur\
+\
+\
+man tr // translate \
+man sed // stream editor \'92s\'92 for substitutes\
+man ls // list directory contents\
+man wc // word line character and byte count // wc -l is line\
+man awk // scans input for line that matches pattern NR // ordinary number \
+man grep // file pattern searcher, // -E extended regex .. \
+man cut // cuts out selected portions \
+\
+\
+\
+
+\fs44 \
+\
+\
+\
+
+\fs24 \
+\
+\
+\
+\
+}

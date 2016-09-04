@@ -3,7 +3,7 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	unassigned int n;
+	unsigned int n;
 
 	if (nb < 0)
 	{
@@ -11,8 +11,8 @@ void	ft_putnbr(int nb)
 		n = -nb;
 	}
 	else
-		n = nb
-	if (n > '9')
-		ft_putnbr(n % 10 + '0')	
-	ft_putchar(n);
+		n = nb;
+	if (n > 9)
+		ft_putnbr(n / 10);
+	ft_putchar(n % 10 + '0');
 }

@@ -1,0 +1,33 @@
+d04 La recursivite.
+
+Programation cannonique : str_length
+
+Recursivite : pouppee russes
+
+La pile se rempli au fure a mesure. 
+
+La main est pushe sur le stack. 
+
+
+Fonction factorielle: 
+
+5! = 5 * 4 * 3 * 2 * 1
+
+5! = 5 * 4!
+4! = 4 * 3!
+....
+1 = 1!
+
+Pour tout n > 0 
+
+n ! = n * n -1  * n -2 * ... * 3 * 2 * 1
+( n - 1 )! = ( n - 1) * ( n - 2 )!
+
+fact(N) = N * fact ( N - 1 )
+fact(1) = 1
+
+
+
+
+
+

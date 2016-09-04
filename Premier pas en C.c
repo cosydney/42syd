@@ -27,7 +27,7 @@ Moulinette
  -Wall -Wextra -Werror
 
   
-norminette -R CheckForbiddenSourceHeader *.c
+norminette -R CheckForbiddenSourceHeader
 
 gcc -Wall -Wextra -Werror -o EXECUTABLE  fichier.c fichier2.c
 

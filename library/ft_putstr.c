@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sycohen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/01 13:49:15 by sycohen           #+#    #+#             */
-/*   Updated: 2016/09/01 15:32:16 by sycohen          ###   ########.fr       */
+/*   Created: 2016/09/06 09:29:53 by sycohen           #+#    #+#             */
+/*   Updated: 2016/09/06 09:34:57 by sycohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+void	ft_putchar(char c);
 
-void	ft_swap(int *a, int *b)
+void	ft_putstr(char *str)
 {
-	int c;
+	int i;
 
-	c = *a;
-	*a = *b;
-	*b = c;
-
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
-
-
-
-int	main()
-{
-	int a;
-	int b;
-	
-	int	*ptra;
-	int *ptrb;
-	ptra = &a;
-	ptrb = &b;
-	a = 10;
-	b = 100;
-
-
-	ft_swap(ptra, ptrb);
-	printf("a : %d, pendant que b :%d", *ptra, *ptrb);
-	return(0);
-}
-

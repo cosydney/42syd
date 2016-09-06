@@ -46,3 +46,5 @@ int main()
 	ft_strrev(tablo);
 	return(0);
 }
+
+

@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sycohen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/01 13:49:15 by sycohen           #+#    #+#             */
-/*   Updated: 2016/09/01 15:32:16 by sycohen          ###   ########.fr       */
+/*   Created: 2016/09/06 09:43:26 by sycohen           #+#    #+#             */
+/*   Updated: 2016/09/06 10:25:57 by sycohen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-void	ft_swap(int *a, int *b)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int c;
+	int i;
 
-	c = *a;
-	*a = *b;
-	*b = c;
-
+	i = 0;
+	while (s1[i] == s2[i])
+	{
+		if (s1[i] == '\0' || s2[i] == '\0')
+			return (0);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
-
-
-
-int	main()
-{
-	int a;
-	int b;
-	
-	int	*ptra;
-	int *ptrb;
-	ptra = &a;
-	ptrb = &b;
-	a = 10;
-	b = 100;
-
-
-	ft_swap(ptra, ptrb);
-	printf("a : %d, pendant que b :%d", *ptra, *ptrb);
-	return(0);
-}
-

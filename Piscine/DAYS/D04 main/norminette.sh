@@ -1,0 +1,1 @@
+find . | norminette -R CheckForbiddenSourceHeader
